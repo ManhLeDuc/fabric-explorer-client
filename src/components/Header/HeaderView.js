@@ -486,7 +486,7 @@ export class HeaderView extends Component {
 		const { hostname, port } = window.location;
 		const webSocketProtocol =
 			window.location.protocol === 'https:' ? 'wss' : 'ws';
-		const webSocketUrl = `${webSocketProtocol}://${hostname}:${port}/`;
+		const webSocketUrl = `${webSocketProtocol}://${process.env.PUBLIC_URL.slice(8)}/`;
 		const dark = mode === 'dark';
 		const {
 			isLoading,
